@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Cars</title>
+</head>
+<style>
+    *{
+        font-family:'Times New Roman', Times, serif
+    }
+body{
+    /* css reset */
+    margin: 0px;
+    padding: 0px;
+    background: url(b.jpg) no-repeat center;
+    background-size: cover;
+    height: 500px;
+}
+.left{
+    display: inline-block;
+    position: absolute;
+    left: 33px;
+    top: 22px;
+    text-align: center;
+
+
+}
+.left img{
+    width: 75px;
+    filter: invert(0);
+    border-radius: 25px;
+    transition: transform 0.3s;
+}
+.left img:hover{
+    cursor: pointer;
+    transform: translateY(-10px);
+    transform: scale(1.7);    
+}
+.left div{
+    text-align: center;
+}
+.center{
+    display: block;
+    width: 90%;
+    margin: 16.5px auto;
+    position: absolute;
+    left: 200px;
+    background-color: #0000004b;
+    border-radius: 25px;
+
+}
+.right{
+    display: inline-block;
+    position: absolute;
+    right: 60px;
+    top: 21px;
+}
+.right form input#arch{
+    width: 200px;
+    border-radius: 5px;
+    padding: 6px;
+    border: 2px solid rgb(255, 0, 0);
+    background-color: rgba(255, 255, 255, 0.671);
+    font-size: 20px;
+    transition: transform 0.3s;
+    
+}
+.right form input#arch:hover{
+    border: 2px solid yellow;
+    background-color: yellow;
+    transform: translateY(-10px);
+    transform: scale(0.9);
+}
+button{
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.26);
+    padding: 6px;
+    border: 2px solid rgb(51, 255, 0);
+    cursor: pointer;
+    font-size: 25px;
+    transition: transform 0.3s;
+    
+}
+button:hover{
+    background-color: rgb(7, 255, 7);
+    transform: translateY(-10px);
+    transform: scale(1.09);
+    
+}
+
+.navbar{
+    display: inline-block;
+}
+.navbar li{
+    display: inline-block;
+    font-size: 20px;
+}
+.navbar li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px;
+    margin: 33px;
+    background-color: rgba(90, 88, 88, 0);
+    border-radius: 25px;
+   
+}
+.navbar li a:hover{
+    color: rgb(0, 255, 13);
+}
+.navbar li a.active4:hover{
+    color: rgb(0, 162, 255);
+}
+.navbar li a.active2:hover, .navbar li a.active2{
+    color: rgb(255, 217, 0);
+    background-color: rgba(3, 8, 8, 0.205);
+}
+.navbar li a.active3:hover{
+    color: rgb(255, 0, 0);
+}
+.h2{
+    display: inline-block;
+    position: absolute;
+    margin: 99px auto;
+    left: 520px;
+    width: 300px;
+    text-align: center;
+    border-radius: 25px;
+    text-decoration:underline;
+    background-color: rgba(0, 0, 0, 0.116);
+    transition: transform(0.3s);
+}
+.h2:hover{
+    cursor: pointer;
+    color:aqua;
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+    transform: scale(1.05);
+}
+.p1{
+    display: inline-block;
+    position: absolute;
+    margin: 200px auto;
+    left: 40px;
+    border: 1px solid rgb(0, 238, 255);
+    width: 1150px;
+    text-align: left;
+    border-radius: 0px 40px 40px 0px;   
+    background-color: rgba(0, 0, 0, 0.89);
+    color: rgb(126, 255, 249);
+    transition: transform 0.3s;
+}
+.p1:hover{
+    transform: translateY(-10px);
+    transform: scale(1.05);
+}
+.p2{
+    display: inline-block;
+    position: absolute;
+    margin: 250px auto;
+    right: 40px;
+    border: 1px solid rgb(0, 238, 255);
+    width: 1150px;
+    text-align: right;
+    border-radius: 40px 0px 0px 40px;
+    background-color: rgba(0, 0, 0, 0.89);
+    color: rgb(126, 255, 249);
+    transition: transform 0.3s;
+
+}
+.p2:hover{
+    transform: translateY(-10px);
+    transform: scale(1.05);
+}
+
+.p3{
+    display: inline-block;
+    position: absolute;
+    margin: 300px auto;
+    left: 40px;
+    border: 1px solid rgb(0, 238, 255);
+    width: 1150px;
+    text-align: left;
+    border-radius: 0px 40px 40px 0px;
+    background-color: rgba(0, 0, 0, 0.89);
+    color: rgb(126, 255, 249);
+    transition: transform 0.3s;
+}
+.p3:hover{
+    transform: translateY(-10px);
+    transform: scale(1.05);
+}
+.p4{
+    display: inline-block;
+    position: absolute;
+    margin: 350px auto;
+    right: 40px;
+    border: 1px solid rgb(0, 238, 255);
+    width: 1100px;
+    text-align: right;
+    border-radius: 40px 0px 0px 40px;
+    background-color: rgba(0, 0, 0, 0.89);
+    color: rgb(126, 255, 249);
+    transition: transform 0.3s;
+}
+.p4:hover{
+    transform: translateY(-10px);
+    transform: scale(1.05);
+}
+.p5{
+    display: inline-block;
+    position: absolute;
+    margin: 400px auto;
+    left: 40px;
+    border: 1px solid rgb(0, 238, 255);
+    width: 950px;
+    text-align: eft;
+    border-radius: 0px 40px 40px 0px;
+    background-color: rgba(0, 0, 0, 0.89);
+    color: rgb(126, 255, 249);
+    transition: transform 0.3s;
+}
+.p5:hover{
+    transform: translateY(-10px);
+    transform: scale(1.05);
+}
+.p6{
+    display: inline-block;
+    position: absolute;
+    margin: 450px auto;
+    right: 40px;
+    border: 1px solid rgb(0, 238, 255);
+    width: 800px;
+    text-align: right;
+    border-radius: 40px 0px 0px 40px;
+    background-color: rgba(0, 0, 0, 0.89);
+    color: rgb(126, 255, 249);
+    transition: transform 0.3s;
+}
+.p6:hover{
+    transform: translateY(-10px);
+    transform: scale(1.05);
+}
+.h21{
+    display: inline-block;
+    position: absolute;
+    margin: 520px auto;
+    left: 300px;
+    border: 1px solid rgb(225, 0, 255);
+    width: 800px;   
+    text-align: center;
+    border-radius: 40px 0px 40px 0px;
+    background-color: rgba(255, 255, 255, 0.904);
+    color: rgb(255, 0, 242);
+}
+
+</style>
+<body>
+    <header class="header">
+        <!-- left box for logo  -->
+        <div class="left">
+            <img src="logo.jpg" alt="Logo">
+            <div>Sports Cars</div>
+        </div>
+        <!-- this is for navvbar  -->
+        <div class="center">
+            <ul class="navbar">
+                <li><a href="index.html" class="active1" target="_self">Cars Home</a></li>
+                <li><a href="aboutus.html" class="active2" target="_self">Aboout Cars Home</a></li>
+                <li><a href="contactselfml " class="active3" target="_self">Contact Us</a></li>
+                <li><a href="https://wselftocar.co.uk/car-news/best-cars/top-10-best-sports-cars" class="active4" target="_self">Best Choice</a></li>
+            </ul>
+
+        </div>
+        <!-- this is for detils  -->
+        <div class="right">
+            <form action="">
+                <input type="search" id="arch" placeholder="Search...">
+                    <button id="arch2">GO!</button>
+            </form>
+        </div>
+    </header>
+    <div class="h2">
+    <h2>About the Sports cars</h2>  
+    </div>
+    <div class="p">
+        <p class="p1">
+            Welcome to Speedster Haven, your ultimate destination for all things sports cars! At Speedster Haven, we are driven by our passion for high-performance vehicles and the exhilarating experience they offer. Our journey began with a simple dream: to create a community where sports car enthusiasts could come together to celebrate their shared love for speed, innovation, and automotive excellence.
+        </p><br>
+
+        <p class="p2">
+            Our team is comprised of dedicated professionals and car aficionados who live and breathe the world of sports cars. With years of experience in the automotive industry, we have cultivated a deep understanding of what makes these machines truly special. From the sleek lines of a Ferrari to the roaring engine of a Lamborghini, our admiration for sports cars is boundless, and we strive to share that enthusiasm with you.
+        </p><br>
+        <p class="p3">
+        At Speedster Haven, we believe that sports cars are more than just vehicles—they are a statement of style, a   testament to engineering prowess, and a source of pure driving joy. Our website is designed to be a one-stop resource for all your sports car needs. Whether you're a seasoned collector, a first-time buyer, or simply an admirer of automotive beauty, we have something for you.
+        </p><br>    
+        <p class="p4">
+        We offer comprehensive reviews, in-depth articles, and the latest news on the hottest sports cars on the market. Our goal is to keep you informed and inspired, providing you with all the information you need to make informed decisions. We also feature detailed guides and tips to help you maintain and enhance your sports car, ensuring it performs at its best.
+        </p><br>
+        <p class="p5">
+        Our commitment extends beyond just providing information. We are passionate about building a community where enthusiasts can connect, share stories, and exchange knowledge. Join our forums, participate in our events, and be a part of a network that shares your passion for speed and performance.
+        </p><br>
+        <p class="p6">
+        Thank you for visiting Speedster Haven. We invite you to explore our website, immerse yourself in the world of sports cars, and join us on this thrilling journey. Together, let's celebrate the art of driving and the remarkable machines that make it all possible.
+        </p><br>
+    <h2 class="h21">Welcome to the world of Speedster Haven—where speed meets passion.</h2>
+    </div>
+    </body>
+    </html>

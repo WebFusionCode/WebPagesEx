@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Cars</title>
+    <style>
+        *{
+            font-family:'Times New Roman', Times, serif
+        }
+        body{
+            /* css reset */
+            margin: 0px;
+            padding: 0px;
+            background: url(interior2.jpg.jpg) no-repeat center;
+            background-size: cover;
+            min-height: 500px;
+        }
+        .left{
+            display: inline-block;
+            position: absolute;
+            left: 33px;
+            top: 22px;
+            text-align: center;
+            filter: invert(100);
+        }
+        .left img{
+            width: 75px;
+            filter: invert(0);
+            border-radius: 25px;
+            transition: transform 0.3s;
+        }
+        .left img:hover{
+            cursor: pointer;
+            transform: translateY(-10px);
+            transform: scale(1.7);    
+        }
+        .left div{
+            text-align: center;
+        }
+        .center{
+            display: block;
+            width: 90%;
+            margin: -4.5px auto;
+            position: absolute;
+            left: 200px;
+            top: 22px;
+            background-color: #fffcfc28;
+            border-radius: 25px;
+        }
+        .right{
+            display: inline-block;
+            position: absolute;
+            right: 60px;
+            top: 21px;
+        }
+        .right form input#arch{
+            width: 200px;
+            border-radius: 5px;
+            padding: 6px;
+            border: 2px solid rgb(255, 0, 0);
+            background-color: rgba(255, 255, 255, 0.671);
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+        .right form input#arch:hover{
+            border: 2px solid yellow;
+            background-color: yellow;
+            transform: translateY(-10px);
+            transform: scale(0.9);
+        }
+        button{
+            border-radius: 25px;
+            background-color: rgba(255, 255, 255, 0.26);
+            padding: 6px;
+            border: 2px solid rgb(51, 255, 0);
+            cursor: pointer;
+            font-size: 25px;
+            transition: transform 0.3s;
+        }
+        button:hover{
+            background-color: rgb(7, 255, 7);
+            transform: translateY(-10px);
+            transform: scale(1.09);
+        }
+        .navbar{
+            display: inline-block;
+        }
+        .navbar li{
+            display: inline-block;
+            font-size: 20px;
+        }
+        .navbar li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            padding: 10px;
+            margin: 33px;
+            background-color: rgba(90, 88, 88, 0);
+            border-radius: 25px;
+        }
+        .navbar li a:hover{
+            color: rgb(0, 255, 13);  
+        }
+        .navbar li a.active4:hover{
+            color: rgb(0, 162, 255);
+        }
+        .navbar li a.active2:hover{
+            color: rgb(255, 217, 0);
+        }
+        .navbar li a.active3:hover, .navbar li a.active3{
+            color: rgb(255, 0, 0);
+            background-color: rgba(255, 255, 255, 0.219);
+        }
+        .contact-container {
+            background-color: rgba(0, 0, 0, 0.562);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            margin: 200px auto;
+            position: relative;
+            top: 100px;
+        }
+        .contact-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-container label {
+            margin: 10px 0 5px;
+        }
+        .contact-container input, .contact-container textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            font-size: 16px;
+            transition: transform 0.3s;
+        }
+        .contact-container input:hover, .contact-container textarea:hover{
+            transform: translateY(-10px);
+            transform: scale(1.1);
+
+        }
+        .contact-container button {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: green;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-container button:hover {
+            background-color: darkgreen;
+        }
+        .contact-details {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <!-- left box for logo  -->
+        <div class="left">
+            <img src="logo.jpg" alt="Logo">
+            <div>Speedster Haven</div>
+        </div>
+        <!-- this is for navbar  -->
+        <div class="center">
+            <ul class="navbar">
+                <li><a href="index.html" class="active1" target="_self">Cars Home</a></li>
+                <li><a href="aboutus.html" class="active2" target="_self">About Cars Home</a></li>
+                <li><a href="contactus.html" class="active3" target="_self">Contact Us</a></li>
+                <li><a href="https://www.autocar.co.uk/car-news/best-cars/top-10-best-sports-cars" class="active4" target="_self">Best Choice</a></li>
+            </ul>
+        </div>
+        <!-- this is for details  -->
+        <div class="right">
+            <form action="">
+                <input type="search" id="arch" placeholder="Search...">
+                <button id="arch2">GO!</button>
+            </form>
+        </div>
+    </header>
+    <section class="contact-container">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-details">
+            <p><strong>Address:</strong> 123 Speedster Lane, Mumbai, 421302</p>
+            <p><strong>Phone:</strong> +91 7020104933</p>
+            <p><strong>Email:</strong> info@speedsterhaven.com</p>
+        </div>
+    </section>
+</body>
+</html>
