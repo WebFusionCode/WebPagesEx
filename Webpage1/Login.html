@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url(Oblo.jpg) no-repeat center center/cover;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .login-box {
+            width: 350px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.7); /* Transparent white background for blur effect */
+            backdrop-filter: blur(10px); /* Apply blur effect to background */
+            border-radius: 10px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .login-box h2 {
+            margin-bottom: 20px;
+            font-size: 26px;
+            color: #0f1c1c; /* White font color */
+            letter-spacing: 2px;
+        }
+
+        .login-box .user-box {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .login-box .user-box input {
+            width: 100%;
+            padding: 10px 0;
+            background: none;
+            border: none;
+            border-bottom: 2px solid #fff; /* White border bottom */
+            color: #0f1c1c; /* White font color */
+            font-size: 18px;
+            outline: none;
+            transition: border-color 0.5s;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            justify-content: center;
+            position: relative;
+        }
+
+        .login-box .user-box label {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            padding: 10px 20px;
+            pointer-events: none;
+            font-size: 18px;
+            color: #0f1c1c;
+            transition: 0.5s;
+            display: block;
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .login-box .user-box input:focus ~ label,
+        .login-box .user-box input:valid ~ label {
+            left: 120px;
+            font-size: 14px;
+            color:#0f1c1c; /* Adjusted font color */
+        }
+
+        .login-box button {
+            background: #8d8b81b3;
+            border: none;
+            color: #0f1c1c;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes blink {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0; }
+        }
+
+        .login-box button:hover {
+            animation: blink 1s infinite;
+        }
+
+        .login-box a {
+            display: block;
+            margin-top: 20px;
+            color: #0f1c1c;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .login-box a:hover {
+            color: #1e3c72;
+            text-decoration: underline;
+        }
+
+        .signup-link {
+            display: block;
+            margin-top: 10px;
+            color: #0f1c1c;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .signup-link:hover {
+            color: #1e3c72;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="user-box">
+                <input type="text" id="username" name="username" required="">
+                <label>Username</label>
+            </div>
+            <div class="user-box">
+                <input type="password" id="password" name="password" required="">
+                <label>Password</label>
+            </div>
+            <button type="submit">
+                Login
+            </button>
+        </form>
+        <a href="#">Forgot Password?</a>
+        <a href="signup.html" class="signup-link">Signup</a>
+    </div>
+</body>
+</html>

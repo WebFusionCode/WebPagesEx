@@ -1,0 +1,148 @@
+<!-- signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url(Oblo.jpg) no-repeat center center/cover;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .signup-box {
+            width: 350px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.7); /* Transparent white background for blur effect */
+            backdrop-filter: blur(10px); /* Apply blur effect to background */
+            border-radius: 10px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .signup-box h2 {
+            margin-bottom: 20px;
+            font-size: 26px;
+            color: #0f1c1c; /* Font color */
+            letter-spacing: 2px;
+        }
+
+        .signup-box .user-box {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .signup-box .user-box input {
+            width: 100%;
+            padding: 10px 0;
+            background: none;
+            border: none;
+            border-bottom: 2px solid #fff; /* White border bottom */
+            color: #0f1c1c; /* Font color */
+            font-size: 18px;
+            outline: none;
+            transition: border-color 0.5s;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            justify-content: center;
+            position: relative;
+        }
+
+        .signup-box .user-box label {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            padding: 10px 20px;
+            pointer-events: none;
+            font-size: 18px;
+            color: #0f1c1c; /* Font color */
+            transition: 0.5s;
+            display: block;
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .signup-box .user-box input:focus ~ label,
+        .signup-box .user-box input:valid ~ label {
+            left: 120px; /* Adjust this value as needed */
+            font-size: 14px;
+            color: #1e3c72; /* Adjusted font color */
+        }
+
+        .signup-box button {
+            background: #8d8b81b3;
+            border: none;
+            color: #0f1c1c; /* Font color */
+            padding: 10px 20px;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes blink {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0; }
+        }
+
+        .signup-box button:hover {
+            animation: blink 1s infinite;
+        }
+
+        .signup-box a {
+            display: block;
+            margin-top: 20px;
+            color: #0f1c1c; /* Font color */
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .signup-box a:hover {
+            color: #1e3c72; /* Adjusted link hover color */
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-box">
+        <h2>Sign Up</h2>
+        <form>
+            <div class="user-box">
+                <input type="text" name="newusername" required="">
+                <label>New Username</label>
+            </div>
+            <div class="user-box">
+                <input type="email" name="email" required="">
+                <label>Email</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="newpassword" required="">
+                <label>New Password</label>
+            </div>
+            <button type="submit">
+                Sign Up
+            </button>
+        </form>
+    </div>
+</body>
+</html>
+    
